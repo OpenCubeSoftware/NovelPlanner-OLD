@@ -9,6 +9,11 @@ class Scene extends Model
 {
     use HasFactory;
 
+    public function chapter()
+    {
+        return $this->belongsTo(Chapter::class);
+    }
+
     public function characters()
     {
         return $this->belongsToMany(Character::class);
