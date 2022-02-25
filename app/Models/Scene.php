@@ -13,4 +13,14 @@ class Scene extends Model
     {
         return $this->belongsToMany(Character::class);
     }
+
+    public function items()
+    {
+        return $this->belongsToMany(Item::class);
+    }
+
+    public function locations()
+    {
+        return $this->belongsToMany(Location::class);
+    }
 }
